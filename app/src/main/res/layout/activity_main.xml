@@ -8,22 +8,36 @@
     tools:context=".MainActivity">
 
    <ImageView
+       android:background="@color/black"
        android:id="@+id/bossImageView"
        android:layout_width="0dp"
        android:layout_height="0dp"
-       app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/shareButton"
        android:src="@drawable/avantars">
    </ImageView>
 
+   <ProgressBar
+      android:id="@+id/progressBar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="@id/bossImageView"
+       app:layout_constraintTop_toTopOf="@id/bossImageView"
+       app:layout_constraintLeft_toLeftOf="@id/bossImageView"
+       app:layout_constraintRight_toRightOf="@id/bossImageView">
+   </ProgressBar>
+
+
    <Button
+       android:background="@color/share"
       android:id="@+id/shareButton"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
       android:padding="32dp"
       android:text="@string/share"
+       android:textColor="@color/white"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toLeftOf="@id/guideLine"
@@ -31,11 +45,13 @@
    </Button>
 
    <Button
+       android:background="@color/next"
        android:id="@+id/nextButton"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:padding="32dp"
        android:text="@string/next"
+       android:textColor="@color/white"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        app:layout_constraintLeft_toRightOf="@id/guideLine"
